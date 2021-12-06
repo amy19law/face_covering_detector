@@ -1,3 +1,4 @@
+# Created by Amy Law
 # import packages
 import cv2
 import numpy as np
@@ -69,6 +70,8 @@ def detection(detectFace, videoFrame, detectFaceCovering):
 print("Accessing & Starting Camera")
 stream = VideoStream(src=0).start()
 
+# Created by Amy Law
+
 # While Video Stream is Active
 while True:
         
@@ -106,3 +109,4 @@ while True:
 	# Show Output
 	cv2.imshow("Live Video Camera Stream", videoFrame)
 	key = cv2.waitKey(10)
+# Created by Amy Law
