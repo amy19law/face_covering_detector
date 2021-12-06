@@ -1,3 +1,4 @@
+# Created by Amy Law
 # Import Packages & Modules
 from imutils import paths
 import numpy as np
@@ -57,6 +58,8 @@ augmentation = ImageDataGenerator(rotation_range = 20, zoom_range = 0.15, width_
 # Load the MobileNetV2 Network
 baseModel = MobileNetV2(weights = "imagenet", include_top = False, input_tensor = Input(shape=(224, 224, 3)))
 
+# Created by Amy Law
+
 # Construct the main model that will be placed on top of the base model
 mainModel = baseModel.output
 mainModel = AveragePooling2D(pool_size=(7, 7))(mainModel)
@@ -92,3 +95,5 @@ print(classification_report(y2.argmax(axis = 1), predictionIndexs, target_names 
 # Save Model to be use in Detection Program
 print("Saving Model")
 model.save("detection_model.model", save_format="h5")
+
+# Created by Amy Law
